@@ -1,0 +1,26 @@
+A) while loop – Print numbers 1 to 10
+ let i = 1;
+while (i <= 10) {
+  console.log(i);
+  i++;
+}
+b) Simulated do-while loop – Prompt until correct input
+Vinisha: let input;
+do {
+  input = parseInt(prompt("Enter a number greater than 0: "));
+} while (input <= 0);
+c) for loop – Sum of first N natural numbers
+ let n = 5;
+let sum = 0;
+for (let i = 1; i <= n; i++) {
+  sum += i;
+}
+console.log("Sum:", sum);
+ d) Nested for loop – Multiplication table
+for (let i = 1; i <= 5; i++) {
+  let row = "";
+  for (let j = 1; j <= 5; j++) {
+    row += (i * j) + "\t";
+  }
+  console.log(row);
+}
