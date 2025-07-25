@@ -1,0 +1,9 @@
+(i) Variable declarations and console outputs
+var name = "vinisha"
+console.log("Using var:", name)
+let age = 18
+console.log("Using let:", age)
+const college = "KG College of Arts and Science"
+console.log("Using const:", college)
+age = 19
+console.log("Updated age:", age)
