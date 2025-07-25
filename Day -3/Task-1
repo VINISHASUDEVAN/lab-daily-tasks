@@ -1,0 +1,15 @@
+
+(1)Fixed parameters
+function greet(name) {
+    console.log(Hello, ${name}!);
+}
+greet("Vinisha");
+
+function addNumbers(...nums) {
+    let sum = 0;
+    for (let num of nums) {
+        sum += num;
+    }
+    console.log(Sum: ${sum});
+}
+addNumbers(1, 2, 3, 4, 5);
