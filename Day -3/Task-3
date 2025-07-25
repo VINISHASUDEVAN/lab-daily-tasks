@@ -1,0 +1,15 @@
+var globalVar = "global";
+
+function exFunction() {
+    var localVar = "local";
+    if (true) {
+        let blockLet = "block let";
+        const blockConst = "block const";
+        console.log(blockLet); 
+        console.log(blockConst); 
+    }
+    console.log(localVar); 
+}
+
+console.log(globalVar);
+exFunction();
