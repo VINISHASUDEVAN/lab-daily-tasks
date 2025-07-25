@@ -1,0 +1,34 @@
+
+
+A)Callback function example
+function fetchData(callback) {
+    console.log("Fetching data...");
+    callback(); 
+}
+
+function onComplete() {
+    console.log("Fetch complete!");
+}
+
+fetchData(onComplete); 
+2)// Scope
+var globalVar = "I'm global";
+
+function scopeExample () {
+    var functionVar = "Function scoped";
+    let blockLet = "Block scoped";
+    const blockConst = "Also block scoped";
+
+    if (true) {
+        let innerLet = "Inner block let";
+        var innerVar = "Inner function var";
+        console.log(innerLet); 
+    }
+
+    console.log(innerVar); console.log(innerLet); 
+}
+
+scopeExample();
+
+
+
