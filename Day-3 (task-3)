@@ -1,0 +1,15 @@
+const removeLastTask = function() {
+  tasks.pop();
+  console.log("Last task removed.");
+  printTasks();
+};
+let globalVar = "I am a global variable";
+
+function showScopes() {
+  let localVar = "I am a local variable"; 
+  console.log(globalVar); 
+  console.log(localVar);   
+}
+
+showScopes()
+console.log(localVar);  
