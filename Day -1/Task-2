@@ -1,0 +1,21 @@
+
+// (a)Exploring data types
+let a = 20                 
+let b = "70"              
+let c = false           
+let d = null             
+let e = undefined    
+let f = { name: "vinisha" }
+
+console.log(typeof a, typeof b, typeof c, typeof d, typeof e, typeof f);
+
+
+let strNum = "564"
+let numStr = 687
+
+console.log("String to Number:", Number(strNum))
+console.log("Number to String:", String(numStr))
+
+
+console.log("10" + 5)
+console.log("10" - 5)
