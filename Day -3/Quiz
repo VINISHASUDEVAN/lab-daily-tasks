@@ -1,0 +1,13 @@
+1. -->(parameters)=>{
+    function body
+}
+
+2. -->A callback function is a function passed as an argument to another function,to be executed by that function.
+
+3. -->Function Declaration :Defined using the function keyword followed by the name and the parameters.
+   -->Function Expression : A function assigned to a varaiable
+
+4. -->Global scope:
+        Accessible from anywhere in the code.
+   -->Local scope:
+        Accessible only within the function or block where it is defined.
