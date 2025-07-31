@@ -1,0 +1,13 @@
+1. -->let is block-scoped
+   -->var is function-scoped
+
+2. --> The output will be '5 5' due to string concatenation 
+
+3. --> == is used
+
+4. --> It evaluates the condition and returns one of two values based on whether the condition is true or false
+
+5. -->For let x=5;
+       console.log(x++);
+       console.log(x++);
+       //output 5 and 7
