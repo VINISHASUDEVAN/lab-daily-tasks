@@ -1,0 +1,18 @@
+Task 1: Math & String Built-in Functions
+
+
+A. Generate random numbers and round
+
+
+let num = Math.random() * 100;
+console.log("Random number:", num);
+console.log("Rounded up:", Math.ceil(num));
+console.log("Rounded down:", Math.floor(num));
+console.log("Rounded:", Math.round(num));
+
+B. String manipulations
+let str = "hello world";
+console.log(str.toUpperCase()); 
+console.log(str.substring(0, 5)); 
+console.log(str.includes("world")); 
+console.log(str.replace("world", "JS")); 
