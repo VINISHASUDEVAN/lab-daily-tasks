@@ -1,0 +1,10 @@
+1. -->If statement is used to execute a block of code if certain condition is true.
+   -->else-if statement is used to check another condition if the inital if condition is false,it allows for multiple condtions.
+
+2. -->When checking a variable against multiple constants,switch is more efficient and readable.
+
+3. -->break terminates the loop,stopping execution and continuing after the loop.
+
+4. -->while checks the condition before the loop,while do-while checks after ensuring atleast one execution.
+
+5. -->continue skips the current iteration  and moves to the next one.
