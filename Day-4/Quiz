@@ -1,0 +1,9 @@
+1. -->Math,floor (4,7) returns 4
+
+2. -->Use the toUpperCase() method.
+
+3. -->forEach iterates without returning a new Array,while map creates a new Array. 
+
+4. -->for-in iterates over array indices. 
+
+5. -->[1,4,9,16,25]
