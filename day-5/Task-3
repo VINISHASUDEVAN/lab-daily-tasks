@@ -1,0 +1,67 @@
+
+Task 3: Object Destructuring and Spread (JavaScript)
+
+
+1. Basic Object Destructuring
+  
+const student = {
+  name: "vinisha",
+  age: 18,
+  course: "Computer Science"
+};
+
+// Destructure properties
+const { name, age } = student;
+console.log(name);
+console.log(age); 
+
+2. Destructuring with Default Values
+
+const book = {
+  title: "The Alchemist",
+  author: "Paulo Coelho"
+};
+const { title, pages = 300 } = book;
+console.log(title);
+console.log(pages); 
+
+3. Destructuring Nested Objects
+
+const user = {
+  username: "vinisha123",
+  address: {
+    city: "coimbatore",
+    pin: 641025
+  }
+};
+
+// Destructure nested object
+const { address: { city, pin } } = user;
+console.log(city); 
+console.log(pin); 
+
+
+ 4. Clone an Object with Spread Operator
+
+const original = {
+  a: 1,
+  b: 2
+};
+
+const clone = { ...original };
+console.log(clone); 
+
+5. Merge Two Objects Using Spread
+
+const obj1 = { x: 10, y: 20 };
+const obj2 = { y: 99, z: 30 };
+
+const merged = { ...obj1, ...obj2 };
+console.log(merged); 
+
+
+
+
+
+
+Show quoted text
