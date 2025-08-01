@@ -1,0 +1,69 @@
+
+Shopping Cart Module 
+
+// 1️⃣ Array of product objects (id, name, price, quantity)
+
+
+let products = [
+    { id: 1, name: "Laptop", price: 55000, quantity: 2 },
+    { id: 2, name: "Mouse", price: 500, quantity: 0 },
+    { id: 3, name: "Keyboard", price: 1000, quantity: 1 },
+    { id: 4, name: "Monitor", price: 12000, quantity: 0 },
+    { id: 5, name: "Phone", price: 25000, quantity: 3 }
+];
+
+
+// 2️⃣ Use filter() to get available products (quantity > 0)
+
+const availableProducts = products.filter(p => p.quantity > 0);
+console.log("Available Products:", availableProducts);
+
+
+// 3️⃣ Use reduce() to calculate total cart value
+const totalValue = products.reduce((total, item) => {
+    return total + (item.price * item.quantity);
+}, 0);
+console.log("Total Cart Value:", totalValue);
+
+
+// 4️⃣ Use slice() and splice() to manipulate product list
+
+
+const firstThree = products.slice(0, 3);
+console.log("First Three Products:", filter);
+
+const removedProduct = products.splice(1, 1);
+console.log("Removed Product:", removedProduct);
+console.log("Updated Product List:", products);
+
+
+// 5️⃣ Use spread operator to clone and update list
+
+
+const clonedProducts = [...products];
+
+
+const newProduct = { id: 6, name: "Tablet", price: 15000, quantity: 1 };
+const updatedList = [...clonedProducts, newProduct];
+console.log("Updated List with New Product:", updatedList);
+
+
+// 6️⃣ Product object with method to print details
+const productTemplate = {
+    id: 7,
+    name: "Smart Watch",
+    price: 7000,
+    quantity: 2,
+    printDetails() {
+        console.log(`Product: ${this.name}, Price: ₹${this.price}, Qty: ${this.quantity}`);
+    }
+};
+
+productTemplate.printDetails();
+
+
+// 7️⃣ Destructuring to extract and display product details
+const { name, price, quantity } = productTemplate;
+console.log(`Destructured → Name: ${name}, Price: ₹${price}, Quantity: ${quantity}`);
+
+
