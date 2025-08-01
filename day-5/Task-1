@@ -51,4 +51,4 @@ const arr2 = [30, 40];
 const mergedArray = [...arr1, ...arr2];
 console.log("Merged Array:", mergedArray); // Output: [10, 20, 30, 40]
 
-Show quoted text
+
