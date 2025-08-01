@@ -1,0 +1,42 @@
+
+Task 2: Working with Objects and Methods :
+
+🔸 1. Create an Object (e.g., a Student)
+// Create a student object
+const student = {
+    name: "vinisha",
+    age: 18,
+    course: "Computer Science",
+
+    // Method to display student information
+    displayInfo: function () {
+        console.log(`Name: ${this.name}`);
+        console.log(`Age: ${this.age}`);
+        console.log(`Course: ${this.course}`);
+    }
+};
+
+
+🔸 2. Add a New Method to the Object
+// Add a method to calculate graduation year
+student.graduationYear = function(currentYear) {
+    const courseDuration = 4; 
+    return currentYear + courseDuration - 1;
+};
+
+console.log("Graduation Year:", student.graduationYear(2025)); 
+
+
+🔸 3. Access and Modify Object Properties
+// Access properties
+console.log("Student Name:", student.name);
+
+// Modify properties
+student.age = 21;
+console.log("Updated Age:", student.age);
+
+// Add a new property
+student.email = "vini123@example.com";
+console.log("Email:", student.email); // vini123@example.com
+
+Show quoted text
