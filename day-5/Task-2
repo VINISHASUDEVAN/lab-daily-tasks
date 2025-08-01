@@ -39,4 +39,3 @@ console.log("Updated Age:", student.age);
 student.email = "vini123@example.com";
 console.log("Email:", student.email); // vini123@example.com
 
-Show quoted text
