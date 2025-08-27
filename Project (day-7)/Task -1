@@ -1,0 +1,35 @@
+// Sample array
+const numbers = [5, 12, 8, 20, 3, 15];
+
+// 1. filter() → get numbers > 10
+const filtered = numbers.filter(num => num > 10);
+console.log("Filtered (>10):", filtered); // [12, 20, 15]
+
+// 2. reduce() → sum of numbers
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log("Sum:", sum); // 63
+
+// reduce() → product of numbers
+const product = numbers.reduce((acc, curr) => acc * curr, 1);
+console.log("Product:", product);
+
+// reduce() → concatenate strings
+const words = ["Hello", "World", "JS"];
+const sentence = words.reduce((acc, curr) => acc + " " + curr);
+console.log("Sentence:", sentence); // "Hello World JS"
+
+// 3. slice() → extract portion (does NOT modify original)
+const sliced = numbers.slice(1, 4);
+console.log("Sliced (1–4):", sliced); // [12, 8, 20]
+
+// 4. splice() → remove/add elements (does modify original)
+let nums = [1, 2, 3, 4, 5];
+nums.splice(2, 1, 99); // remove 1 element at index 2, add 99
+console.log("After splice:", nums); // [1,2,99,4,5]
+
+// 5. Spread operator → clone & merge arrays
+const clone = [...numbers];
+const merged = [...numbers, ...[30, 40]];
+console.log("Clone:", clone);
+console.log("Merged:", merged);
+[27/08, 8:02 pm] Vinisha: Advanced array method
