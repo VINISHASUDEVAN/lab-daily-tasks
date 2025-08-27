@@ -1,0 +1,28 @@
+ Task 1: Destructuring, Notation & Iteration
+ // Example object with nested properties
+const user = {
+  id: 101,
+  name: "Alice",
+  address: {
+    city: "New York",
+    zip: 10001
+  }
+};
+
+// Destructuring with nested object
+const { name, address: { city } } = user;
+console.log(name);  // Alice
+console.log(city);  // New York
+
+// Access properties using dot and bracket notation
+console.log(user.address.zip);     // Dot notation
+console.log(user["address"]["zip"]); // Bracket notation
+
+// Iterating through object
+for (let key in user) {
+  console.log(`${key}: ${user[key]}`);
+}
+
+const arr = [10, 20, 30];
+const [first, second] = arr;
+console.log(first, second); // 10, 20
