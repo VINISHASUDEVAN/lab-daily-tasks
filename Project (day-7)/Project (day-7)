@@ -1,0 +1,44 @@
+ // 1. Create array of product objects
+let products = [
+  { id: 1, name: "Laptop", price: 50000, quantity: 2 },
+  { id: 2, name: "Phone", price: 20000, quantity: 0 },
+  { id: 3, name: "Headphones", price: 2000, quantity: 5 },
+  { id: 4, name: "Keyboard", price: 1500, quantity: 1 }
+];
+
+// 2. filter() → available items
+let available = products.filter(p => p.quantity > 0);
+console.log("Available:", available);
+
+// 3. reduce() → total cart value
+let totalValue = products.reduce((acc, p) => acc + (p.price * p.quantity), 0);
+console.log("Total Cart Value:", totalValue);
+
+// 4. slice() & splice() → remove product
+let slicedProducts = products.slice(0, 2); // copy first 2
+console.log("Sliced products:", slicedProducts);
+
+products.splice(1, 1); // remove product at index 1
+console.log("After splice:", products);
+
+// 5. Spread → clone & update
+let clonedProducts = [...products];
+let updatedProducts = [...products, { id: 5, name: "Mouse", price: 1000, quantity: 3 }];
+console.log("Cloned:", clonedProducts);
+console.log("Updated:", updatedProducts);
+
+// 6. Product object with method
+let product = {
+  id: 10,
+  name: "Monitor",
+  price: 12000,
+  quantity: 1,
+  printDetails() {
+    console.log(`${this.name} - Rs.${this.price} (Qty: ${this.quantity})`);
+  }
+};
+product.printDetails();
+
+// 7. Destructuring to display product
+let { name: prodName, price: prodPrice } = product;
+console.log(`Destructured: ${prodName} costs Rs.${prodPrice}`);
