@@ -1,0 +1,19 @@
+const person = { name: "Bob", age: 25, address: { city: "Paris" } };
+
+// 1. Destructure properties
+const { name, age } = person;
+console.log(name, age);
+
+// 2. With default values
+const { country = "France" } = person;
+console.log(country); // France
+
+// 3. Nested objects
+const { address: { city } } = person;
+console.log(city); // Paris
+
+// 4. Spread operator → clone & merge
+const clonePerson = { ...person };
+const mergedPerson = { ...person, age: 30 };
+console.log(clonePerson);
+console.log(mergedPerson);
