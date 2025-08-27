@@ -1,0 +1,45 @@
+
+1)It returns a new array containing all the elements of the original array that satisfy the condition specified in the callback function.
+
+2)The reduce() method reduces an array to a single value (number, string, object, etc.) by applying a callback function on each element.
+It accumulates results as it iterates.
+
+ 3)slice()
+
+Returns a new array containing selected elements.
+Does not modify the original array.
+Syntax: array.slice(start, end) → end index is not included.
+Use case: copying or extracting part of an array.
+
+ii)splice()
+
+Removes, replaces, or adds elements in the array.
+Modifies the original array.
+Syntax: array.splice(start, deleteCount, item1, item2, …)
+Use case: inserting, deleting, or replacing elements in an array.
+
+4)What is the spread operator used for? (...)
+The spread operator (...) expands arrays or objects.
+
+5)A method is just a function stored as a property.
+Example 
+const person = {
+  name: "John",
+  greet: function() {
+    console.log("Hello, I am " + this.name);
+  }
+};
+
+// shorthand (ES6)
+const person2 = {
+  name: "Sara",
+  greet() {
+    console.log(`Hello, I am ${this.name}`);
+  }
+};
+
+person.greet();  // Hello, I am John
+person2.greet(); // Hello, I am Sara
+
+6)What does destructuring do?
+Destructuring allows unpacking values from arrays or properties from objects into variables.
