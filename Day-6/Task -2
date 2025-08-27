@@ -1,0 +1,30 @@
+ Task 2: Complex Data & Parameter Handling
+ // Array of objects
+const products = [
+  { id: 1, name: "Laptop", price: 500 },
+  { id: 2, name: "Phone", price: 300 }
+];
+
+// Access nested data
+console.log(products[0].name);  // Laptop
+
+// Rest parameter in function
+function sum(...numbers) {
+  return numbers.reduce((a, b) => a + b, 0);
+}
+console.log(sum(1, 2, 3, 4));  // 10
+
+// Spread operator to clone or combine
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5];
+const combined = [...arr1, ...arr2];
+console.log(combined); // [1, 2, 3, 4, 5]
+
+const clonedProduct = { ...products[0] };
+console.log(clonedProduct);
+
+// Parameter destructuring in function
+function printProduct({ id, name, price }) {
+  console.log(`ID: ${id}, Name: ${name}, Price: ${price}`);
+}
+printProduct(products[1]);
