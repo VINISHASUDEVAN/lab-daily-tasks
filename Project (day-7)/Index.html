@@ -1,0 +1,43 @@
+Step 1: Basic HTML Structure
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management System</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input, button { margin: 5px; padding: 8px; }
+    .employee-list { margin-top: 20px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h2>Employee Management System</h2>
+
+  <div>
+    <input type="text" id="empName" placeholder="Name">
+    <input type="text" id="empPosition" placeholder="Position">
+    <input type="number" id="empSalary" placeholder="Salary">
+    <input type="text" id="empDept" placeholder="Department">
+    <select id="empAvailable">
+      <option value="true">Available</option>
+      <option value="false">Not Available</option>
+    </select>
+    <button onclick="addEmployee()">Add Employee</button>
+  </div>
+
+  <div>
+    <input type="text" id="searchName" placeholder="Search by name">
+    <button onclick="searchEmployee()">Search</button>
+    <button onclick="displayEmployees()">Show All</button>
+  </div>
+
+  <div class="employee-list" id="employeeList"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
