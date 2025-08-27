@@ -1,0 +1,80 @@
+
+// Contact Management Module
+
+// Step 1: Create an array of contact objects
+let contacts = [
+  {
+    name: "Alice",
+    phone: "123-456-7890",
+    email: "alice@example.com",
+    display() {
+      console.log(`Name: ${this.name}, Phone: ${this.phone}, Email: ${this.email}`);
+    }
+  },
+  {
+    name: "Bob",
+    phone: "987-654-3210",
+    email: "bob@example.com",
+    display() {
+      console.log(`Name: ${this.name}, Phone: ${this.phone}, Email: ${this.email}`);
+    }
+  }
+];
+
+// Step 2: Destructuring inside a function
+function printContact({ name, phone, email }) {
+  console.log(`(Destructured) Name: ${name}, Phone: ${phone}, Email: ${email}`);
+}
+printContact(contacts[0]);
+
+// Step 3: Access properties using dot and bracket notation
+console.log("Dot notation:", contacts[0].name);
+console.log("Bracket notation:", contacts[1]["email"]);
+
+// Step 4: Iterate through contacts
+console.log("\nAll Contacts:");
+for (let contact of contacts) {
+  contact.display();
+}
+
+// Step 5: Use rest parameters to add multiple contacts
+function addContacts(...newContacts) {
+  contacts.push(...newContacts);
+}
+addContacts(
+  { name: "Charlie", phone: "555-555-5555", email: "charlie@example.com", display() { console.log(`Name: ${this.name}, Phone: ${this.phone}, Email: ${this.email}`); } },
+  { name: "Diana", phone: "666-666-6666", email: "diana@example.com", display() { console.log(`Name: ${this.name}, Phone: ${this.phone}, Email: ${this.email}`); } }
+);
+
+console.log("\nAfter Adding New Contacts:");
+contacts.forEach(c => c.display());
+
+// Step 6: Spread operator to merge contact arrays
+let moreContacts = [
+  { name: "Eve", phone: "777-777-7777", email: "eve@example.com", display() { console.log(`Name: ${this.name}, Phone: ${this.phone}, Email: ${this.email}`); } }
+];
+
+let mergedContacts = [...contacts, ...moreContacts];
+console.log("\nMerged Contacts:");
+mergedContacts.forEach(c => c.display());
+
+// Step 7: Demonstrate call(), apply(), bind()
+let externalContact = {
+  name: "Frank",
+  phone: "888-888-8888",
+  email: "frank@example.com"
+};
+
+function showContactInfo(prefix) {
+  console.log(`${prefix} Name: ${this.name}, Phone: ${this.phone}, Email: ${this.email}`);
+}
+
+// call()
+showContactInfo.call(externalContact, "Using call():");
+
+// apply()
+showContactInfo.apply(externalContact, ["Using apply():"]);
+
+// bind()
+const boundShow = showContactInfo.bind(externalContact);
+boundShow("Using bind():");
