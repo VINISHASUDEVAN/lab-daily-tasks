@@ -1,0 +1,22 @@
+// working with objects and methods 
+const student = {
+  name: "Alice",
+  age: 21,
+  displayInfo: function() {
+    console.log(`Name: ${this.name}, Age: ${this.age}`);
+  }
+};
+
+student.displayInfo(); // "Name: Alice, Age: 21"
+
+// Add method dynamically
+student.sayHello = function() {
+  console.log("Hello, I am " + this.name);
+};
+student.sayHello();
+
+// Accessing & modifying properties
+console.log(student.age); // 21
+student.age = 22;
+console.log("Updated Age:", student.age);
+[27/08, 8:03 pm] Vinisha: Working with objects and methods
