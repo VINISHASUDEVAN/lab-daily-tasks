@@ -1,0 +1,19 @@
+ Task 3: Function Context & Advanced Calls
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+};
+
+function greet(greeting) {
+  console.log(`${greeting}, ${this.firstName} ${this.lastName}`);
+}
+
+// call() - pass arguments one by one
+greet.call(person, "Hello");
+
+// apply() - pass arguments as array
+greet.apply(person, ["Hi"]);
+
+// bind() - create a new function with bound context
+const boundGreet = greet.bind(person);
+boundGreet("Good morning");
